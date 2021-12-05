@@ -69,7 +69,7 @@ public class VideoStreamController {
 			long rangeLength = Long.min(1 * 1024 * 1024, end - start + 1);
 			return new ResourceRegion(video, start, rangeLength);
 		} else {
-			Long rangeLength = Long.min(1 * 1024 * 1024, contentLength);
+			long rangeLength = Long.min(1 * 1024 * 1024, contentLength);
 			return new ResourceRegion(video, 0, rangeLength);
 		}
 	}
